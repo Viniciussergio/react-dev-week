@@ -16,7 +16,7 @@ const PLACES = [
     'Aquário'
 ];
 
-const Home = props => {
+const RioDeJaneiro = props => {
     const [selectedPill, setSelectedPill] = useState('');
 
     return (
@@ -59,4 +59,4 @@ const Home = props => {
     );
 };
 
-export default Home;
+export default RioDeJaneiro;
