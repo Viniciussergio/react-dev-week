@@ -24,6 +24,10 @@ const Home = props => {
             <div className="home__col">
                 <h1 className="home__title">{props.city} para todos</h1>
 
+                <div className="home__imagem home__imagem--destaque hide-desktop">
+                    <img src={imagemDestaque} alt="Imagem Destaque Cadeirante"/>
+                </div>
+
                 <p className="home__text">
                     Nossa missão é facilitar o encontro entre lugares inclusivos e
                     pessoas que buscam alternativas culturais para sair de casa,
@@ -47,7 +51,7 @@ const Home = props => {
                 </div>
             </div>
             <div className="home__col">
-                <div className="home__imagem home__imagem--destaque">
+                <div className="home__imagem home__imagem--destaque hide-mobile">
                     <img src={imagemDestaque} alt="Imagem Destaque Cadeirante"/>
                 </div>
             </div>

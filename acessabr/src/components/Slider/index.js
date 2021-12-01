@@ -9,7 +9,16 @@ SwiperCore.use([Pagination]);
 
 const Slider = () => {
     return (
-        <Swiper navigation slidesPerView={4}>
+        <Swiper navigation slidesPerView={1}
+            breakpoints={{
+                767: {
+                    slidesPerView: 3
+                },
+                1024: {
+                    slidesPerView: 4
+                }
+            }}
+        >
             <SwiperSlide>
                 <Card/>
             </SwiperSlide>

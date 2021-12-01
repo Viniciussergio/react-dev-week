@@ -28,6 +28,8 @@
         font-size: 1.2rem;
         font-weight: 400;
         line-height: 1.4rem;
+        margin-right: 1.2rem;
+        margin-left: 1rem;
     }
 
     &__city {
@@ -36,4 +38,23 @@
         line-height: 1.7rem;
     }
 
+    @media(max-width: 425px) {
+        flex-wrap: wrap;
+
+        &__logo {
+            flex-wrap: wrap;
+        }
+
+        &__city {
+            margin-top: 1rem;
+        }
+
+        &__span {
+            margin-bottom: .4rem;
+        }
+
+        &--ebac {
+            width: 90px;
+        }
+    }
 }
