@@ -3,7 +3,6 @@ import './styles.scss'
 import PropTypes from 'prop-types';
 
 const Pills = ({local, onClick, selected}) => {
-    console.log(selected);
     return (
         <div onClick={onClick} className={`pills__container ${ selected ? 
         'pills__container--active' : ''}`}>

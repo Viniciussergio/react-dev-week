@@ -1,0 +1,124 @@
+{
+    "places": [
+        {
+            "id": 1,
+            "name": "Museu Oscar Niemeyer",
+            "description": "Lorem ipsum dolor sit amet consectetur adpsincing elit.",
+            "link": "http//google.com",
+            "image": "/places/museu-oscar-niemeyer.jpg",
+            "category": "Museu",
+            "location": {
+                "lat": "00000",
+                "long": "00000"
+            },
+            "facilities": [
+                {"item": 1, "status": true},
+                {"item": 2, "status": true},
+                {"item": 3, "status": true},
+                {"item": 4, "status": true},
+                {"item": 5, "status": true},
+                {"item": 6, "status": true},
+                {"item": 7, "status": true},
+                {"item": 8, "status": true},
+                {"item": 9, "status": true},
+                {"item": 10, "status": true}
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Parque São Lourenço",
+            "description": "Lorem ipsum dolor sit amet consectetur adpsincing elit.",
+            "link": "https://google.com",
+            "image": "/places/parque-sao-lourenço.jpeg",
+            "category": "Parque",
+            "location": {
+                "lat": "00000",
+                "long": "00000"
+            },
+            "facilities": [
+                {"item": 1, "status": true},
+                {"item": 2, "status": true},
+                {"item": 3, "status": true},
+                {"item": 4, "status": true},
+                {"item": 5, "status": true},
+                {"item": 6, "status": true},
+                {"item": 7, "status": true},
+                {"item": 8, "status": true},
+                {"item": 9, "status": true},
+                {"item": 10, "status": true}
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Torre Panorâmica",
+            "description": "Lorem ipsum dolor sit amet consectetur adpsincing elit.",
+            "link": "https://google.com",
+            "category": "Museu",
+            "image": "/places/torre-panoramica.webp",
+            "location": {
+                "lat": "00000",
+                "long": "00000"
+            },
+            "facilities": [
+                {"item": 1, "status": true},
+                {"item": 2, "status": true},
+                {"item": 3, "status": false},
+                {"item": 4, "status": true},
+                {"item": 5, "status": true},
+                {"item": 6, "status": true},
+                {"item": 7, "status": true},
+                {"item": 8, "status": true},
+                {"item": 9, "status": true},
+                {"item": 10, "status": true}
+            ]
+        },
+        {
+            "id": 4,
+            "name": "Museu do Automóvel",
+            "description": "Lorem ipsum dolor sit amet consectetur adpsincing elit.",
+            "link": "https://google.com",
+            "image": "/places/museu-automovel.jpeg",
+            "category": "Museu",
+            "location": {
+                "lat": "00000",
+                "long": "00000"
+            },
+            "facilities": [
+                {"item": 1, "status": true},
+                {"item": 2, "status": true},
+                {"item": 3, "status": true},
+                {"item": 4, "status": true},
+                {"item": 5, "status": true},
+                {"item": 6, "status": true},
+                {"item": 7, "status": true},
+                {"item": 8, "status": true},
+                {"item": 9, "status": true},
+                {"item": 10, "status": true}
+            ]
+        },
+        {
+            "id": 5,
+            "name": "Mercado Municipal",
+            "description": "Lorem ipsum dolor sit amet consectetur adpsincing elit.",
+            "link": "https://google.com",
+            "image": "/places/mercado-municipal-de-curitiba.jpg",
+            "category": "Mercado",
+            "location": {
+                "lat": "00000",
+                "long": "00000"
+            },
+            "facilities": [
+                {"item": 1, "status": true},
+                {"item": 2, "status": true},
+                {"item": 3, "status": true},
+                {"item": 4, "status": true},
+                {"item": 5, "status": true},
+                {"item": 6, "status": true},
+                {"item": 7, "status": true},
+                {"item": 8, "status": true},
+                {"item": 9, "status": true},
+                {"item": 10, "status": true}
+            ]
+        }
+    ]
+}

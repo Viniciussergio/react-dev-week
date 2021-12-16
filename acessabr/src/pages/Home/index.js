@@ -1,28 +1,44 @@
-import React, { useState } from 'react';
+import React, { useContext, useEffect} from 'react';
+import { useParams } from 'react-router';
+import { FilterContext } from '../../contexts/FilterContext';
 import imagemDestaque from '../../images/home/imagem-destaque.png';
 import './styles.scss';
 
 import Pills from '../../components/Pills'
+import { LocationContext } from '../../contexts/LocationContext';
 
 const PLACES = [
-    'Praça',
-    'Parque',
-    'Igreja',
-    //'Hotel',
-    //'Restaurante',
-    'Zoológico',
-    //'Farmácia',
-    'Loja',
-    'Aquário'
+    'Mercados',
+    'Museus',
+    'Parques',
+    'Todos'
 ];
 
-const RioDeJaneiro = props => {
-    const [selectedPill, setSelectedPill] = useState('');
+const Home = () => {
+    const {city, state} = useParams();
+    const {setCity, setState} = useContext(LocationContext);
+    const { filteredPlace, setFilteredPlace} = useContext(FilterContext)
+
+    const handleFilteredPlace = (item) => {
+        if(item !== filteredPlace) {
+            setFilteredPlace(item);
+        }
+
+        if(item === 'Todos'){
+            setFilteredPlace(item)
+            console.log(filteredPlace);
+        }
+    }
+
+    useEffect(() => {
+        setCity(city);
+        setState(state);
+    }, [city, state]);
 
     return (
         <main id="main-content" className="home__container">
             <div className="home__col">
-                <h1 className="home__title">{props.city} para todos</h1>
+                <h1 className="home__title">{city} para todos</h1>
 
                 <div className="home__imagem home__imagem--destaque hide-desktop">
                     <img src={imagemDestaque} alt="Imagem Destaque Cadeirante"/>
@@ -43,8 +59,9 @@ const RioDeJaneiro = props => {
                         PLACES.map((item) => {
                             return <Pills
                                 local = {item}
-                                selected = {selectedPill === item}
-                                onClick={() => setSelectedPill(item)}
+                                selected = {filteredPlace === item}
+                                item = {item}
+                                onClick={() => handleFilteredPlace(item)}
                             />
                         })
                     }
@@ -59,4 +76,4 @@ const RioDeJaneiro = props => {
     );
 };
 
-export default RioDeJaneiro;
+export default Home;

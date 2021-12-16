@@ -1,18 +1,24 @@
-import {BrowserRouter as Router, Routes as Switch, Route} from 'react-router-dom';
-import Curitiba from '../pages/Curitiba';
-import SaoPaulo from '../pages/SaoPaulo';
-import RioDeJaneiro from '../pages/RioDeJaneiro';
+import {Routes as Switch, Route} from 'react-router-dom';
+import Home from '../pages/Home';
+import { LocationContext } from '../contexts/LocationContext';
+import { useState } from 'react';
+import Header from '../components/Header';
+import { FilterContext } from '../contexts/FilterContext';
 
-const Routes = props => {
+const Routes = () => {
+    const [city, setCity] = useState('');
+    const [state, setState] = useState('');
+    const [filteredPlace, setFilteredPlace] = useState('');
     return (
-        <Router>
-            <Switch>
-                <Route path='/pr/curitiba' element={<Curitiba city={props.city}/>}/>
-                <Route path='/sp/sao-paulo' element={<SaoPaulo city={props.city}/>}/>
-                <Route path='/rj/rio-de-janeiro' element={<RioDeJaneiro city={props.city}/>}/>
-            </Switch>
-        </Router>
+        <FilterContext.Provider value={{filteredPlace, setFilteredPlace}}>
+            <LocationContext.Provider value={{city, setCity, state, setState}}>
+                <Header />
+                <Switch>
+                    <Route path='/:state/:city' element={<Home city={city} state={state}/>}/>
+                </Switch>
+            </LocationContext.Provider>
+        </FilterContext.Provider>
     );
-}
+};
 
 export default Routes
